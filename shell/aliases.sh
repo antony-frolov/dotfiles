@@ -1,0 +1,5 @@
+alias ls="exa"
+alias ll="exa -alh"
+alias tree="exa --tree"
+alias cat="bat --theme=Dracula"
+alias vim="nvim"
