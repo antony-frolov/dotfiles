@@ -18,8 +18,30 @@ call plug#begin('~/.vim/plugged')
 	Plug 'metakirby5/codi.vim'
 	Plug 'dracula/vim'
     Plug 'itchyny/lightline.vim'
+    Plug 'morhetz/gruvbox'
 call plug#end()
 
+
+"-------------
+" Theme config
+"-------------
+"Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
+if (empty($TMUX))
+  if (has("nvim"))
+    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+  endif
+  if (has("termguicolors"))
+    set termguicolors
+  endif
+endif
+
+let g:lightline = {
+  \ 'colorscheme': 'gruvbox'
+\}
+
+set background=dark
+let g:gruvbox_contrast_dark = 'medium'
+colorscheme gruvbox
 
 "------------------
 " Syntax and indent
@@ -82,9 +104,3 @@ set noerrorbells visualbell t_vb=
 set splitbelow
 set splitright
 
-"------------------------
-" Lightline configuraiton
-"------------------------
-let g:lightline = {
-  \ 'colorscheme': 'dracula'
-\}

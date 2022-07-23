@@ -4,6 +4,7 @@
       relink: true
 
 - link:
+    ~/.config/bat/config: bat/config
     ~/.gitignore_global:
     ~/.p10k.zsh: zsh/p10k.zsh
     ~/.pythonrc:
