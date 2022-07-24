@@ -14,7 +14,9 @@ source $ZSH_BASE/antigen/antigen.zsh
 
 antigen use oh-my-zsh
 
-antigen bundle thefuck
+if (( $+commands[thefuck] )); then
+  antigen bundle thefuck
+fi
 antigen bundle git
 antigen bundle tmux
 antigen bundle zsh-users/zsh-autosuggestions
