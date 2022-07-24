@@ -30,6 +30,8 @@ antigen theme romkatv/powerlevel10k
 
 antigen apply
 
+source .antigen/bundles/zsh-users/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Aliases
