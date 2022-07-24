@@ -20,7 +20,8 @@ antigen bundle tmux
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle docker
 antigen bundle docker-compose
-antigen bundle jeffreytse/zsh-vi-mode
+# antigen bundle jeffreytse/zsh-vi-mode
+antigen bundle vi-mode
 antigen bundle esc/conda-zsh-completion
 antigen bundle heroku
 antigen bundle zsh-users/zsh-completions
@@ -29,8 +30,6 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen theme romkatv/powerlevel10k
 
 antigen apply
-
-source .antigen/bundles/zsh-users/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
