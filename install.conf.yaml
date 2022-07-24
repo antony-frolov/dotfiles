@@ -5,6 +5,7 @@
 
 - link:
     ~/.config/bat/config: bat/config
+    ~/.config/nvim/init.vim: nvim/init.vim
     ~/.gitignore_global:
     ~/.p10k.zsh: zsh/p10k.zsh
     ~/.pythonrc:
