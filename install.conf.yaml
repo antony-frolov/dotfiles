@@ -9,6 +9,7 @@
     ~/.p10k.zsh: zsh/p10k.zsh
     ~/.pythonrc:
     ~/.shell:
+    ~/.tmux.conf:
     ~/.vimrc:
     ~/.zsh:
     ~/.zshrc:

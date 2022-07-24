@@ -16,15 +16,15 @@ antigen use oh-my-zsh
 
 antigen bundle thefuck
 antigen bundle git
+antigen bundle tmux
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle docker
 antigen bundle docker-compose
 antigen bundle jeffreytse/zsh-vi-mode
 antigen bundle esc/conda-zsh-completion
-antigen bundle gh
+antigen bundle heroku
 antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle heroku
 
 antigen theme romkatv/powerlevel10k
 
@@ -38,11 +38,8 @@ source ~/.shell/aliases.sh
 # Functions
 source ~/.shell/functions.sh
 
-eval "$(thefuck --alias)"
-
 # Env vars
 source ~/.shell/env_vars.sh
-
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -59,23 +56,25 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-
-# heroku autocomplete setup
-HEROKU_AC_ZSH_SETUP_PATH=/Users/antony/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
+# ITerm2 Shell Integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-
 # Add 1password shell completion
-eval "$(op completion zsh)"; compdef _op op
-
+if (( $+commands[op] )); then
+  eval "$(op completion zsh)"; compdef _op op
+fi
 
 # Initialize zoxide
-eval "$(zoxide init zsh)"
+if (( $+commands[zoxide] )); then
+  eval "$(zoxide init zsh)"
+fi
+
+# Initialize thefuck
+if (( $+commands[thefuck] )); then
+  eval "$(thefuck --alias)"
+fi
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-
-# QPDF zsh completion
-autoload -U +X bashcompinit && bashcompinit && complete -o bashdefault -o default -C qpdf qpd
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && . "$HOME/.fig/shell/zshrc.post.zsh"

@@ -774,9 +774,6 @@ antigen () {
   if [[ -z "$ZSH_CACHE_DIR" ]]; then
     ZSH_CACHE_DIR="$ZSH/cache"
   fi
-  if [ ! -d "$ZSH_CACHE_DIR/completions" ]; then
-    mkdir -p "$ZSH_CACHE_DIR/completions"
-  fi
   antigen-bundle --loc=lib
 }
 -antigen-use-prezto () {
