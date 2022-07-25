@@ -4,8 +4,9 @@
       relink: true
 
 - link:
-    ~/.config/bat/config: bat/config
-    ~/.config/nvim/init.vim: nvim/init.vim
+    ~/.config/bat: bat
+    ~/.config/btop: btop 
+    ~/.config/nvim: nvim
     ~/.gitignore_global:
     ~/.p10k.zsh: zsh/p10k.zsh
     ~/.pythonrc:
