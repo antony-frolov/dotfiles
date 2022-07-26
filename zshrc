@@ -1,12 +1,13 @@
 # Fig pre block. Keep at the top of this file.
 [[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && . "$HOME/.fig/shell/zshrc.pre.zsh"
-
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
+
+EDITOR=nvim
 
 ZSH_BASE=$HOME/dotfiles
 
@@ -22,11 +23,12 @@ antigen bundle tmux
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle docker
 antigen bundle docker-compose
-# antigen bundle jeffreytse/zsh-vi-mode
-antigen bundle vi-mode
+antigen bundle jeffreytse/zsh-vi-mode
+# antigen bundle vi-mode
 antigen bundle esc/conda-zsh-completion
 antigen bundle heroku
 antigen bundle zsh-users/zsh-completions
+antigen bundle extract
 antigen bundle zsh-users/zsh-syntax-highlighting
 
 antigen theme romkatv/powerlevel10k

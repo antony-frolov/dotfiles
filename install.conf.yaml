@@ -7,6 +7,7 @@
     ~/.config/bat: bat
     ~/.config/btop: btop 
     ~/.config/nvim: nvim
+    ~/.gitconfig:
     ~/.gitignore_global:
     ~/.p10k.zsh: zsh/p10k.zsh
     ~/.pythonrc:
