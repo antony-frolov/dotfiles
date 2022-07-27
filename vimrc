@@ -20,6 +20,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'morhetz/gruvbox'
     Plug 'mbbill/undotree'
     Plug 'preservim/nerdtree'
+    Plug 'ivanov/vim-ipython'
 call plug#end()
 
 
